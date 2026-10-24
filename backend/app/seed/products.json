@@ -1,0 +1,2055 @@
+[
+  {
+    "product_id": "shoe-001",
+    "name": "AeroStride Run X",
+    "brand": "AeroStride",
+    "category": "footwear",
+    "subcategory": "running shoes",
+    "price": 2999,
+    "currency": "INR",
+    "description": "Breathable running shoes made for daily city movement and quick fitness routines.",
+    "tags": [
+      "running",
+      "lightweight",
+      "comfortable",
+      "sport"
+    ],
+    "attributes": {
+      "size": "7-10",
+      "color": "black",
+      "weight": "lightweight"
+    },
+    "use_cases": [
+      "running",
+      "daily use"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/aerostride-run-x",
+    "rating": 4.5,
+    "review_count": 184,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "shoe-002",
+    "name": "TrailFlex Trek Pro",
+    "brand": "TrailFlex",
+    "category": "footwear",
+    "subcategory": "hiking boots",
+    "price": 4599,
+    "currency": "INR",
+    "description": "Hiking boot with weather-ready upper and durable grip for uneven terrain.",
+    "tags": [
+      "hiking",
+      "durable",
+      "waterproof",
+      "outdoor"
+    ],
+    "attributes": {
+      "size": "6-11",
+      "color": "olive",
+      "waterproof": true
+    },
+    "use_cases": [
+      "hiking",
+      "trekking"
+    ],
+    "stock_status": "limited",
+    "image": "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/trailflex-trek-pro",
+    "rating": 4.6,
+    "review_count": 232,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "shoe-003",
+    "name": "CampusEase Slip-On",
+    "brand": "CampusEase",
+    "category": "footwear",
+    "subcategory": "casual shoes",
+    "price": 1899,
+    "currency": "INR",
+    "description": "Easy casual slip-on for regular commuting with moderate support and comfort.",
+    "tags": [
+      "casual",
+      "comfortable",
+      "budget"
+    ],
+    "attributes": {
+      "size": "5-10",
+      "color": "sand"
+    },
+    "use_cases": [
+      "commute",
+      "casual"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/campusease-slip-on",
+    "rating": 4.2,
+    "review_count": 123,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "laptop-001",
+    "name": "NovaBook 14 Air",
+    "brand": "NovaBook",
+    "category": "electronics",
+    "subcategory": "laptop",
+    "price": 52999,
+    "currency": "INR",
+    "description": "Thin and light laptop designed for student work, note-taking, and daily productivity.",
+    "tags": [
+      "lightweight",
+      "student",
+      "portable",
+      "office"
+    ],
+    "attributes": {
+      "ram": "16GB",
+      "storage": "512GB",
+      "weight": "1.2kg"
+    },
+    "use_cases": [
+      "college",
+      "work",
+      "daily use"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/novabook-14-air",
+    "rating": 4.4,
+    "review_count": 311,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "laptop-002",
+    "name": "PeakDrive Pro 15",
+    "brand": "PeakDrive",
+    "category": "electronics",
+    "subcategory": "laptop",
+    "price": 68999,
+    "currency": "INR",
+    "description": "Performance laptop suited for design, editing, and multitasking workloads.",
+    "tags": [
+      "premium",
+      "office",
+      "performance"
+    ],
+    "attributes": {
+      "ram": "32GB",
+      "storage": "1TB",
+      "weight": "1.8kg"
+    },
+    "use_cases": [
+      "creative work",
+      "gaming"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/peakdrive-pro-15",
+    "rating": 4.7,
+    "review_count": 402,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "laptop-003",
+    "name": "StudyLite 13",
+    "brand": "StudyLite",
+    "category": "electronics",
+    "subcategory": "laptop",
+    "price": 38999,
+    "currency": "INR",
+    "description": "Affordable compact laptop for note-taking, browsing, and light productivity.",
+    "tags": [
+      "budget",
+      "student",
+      "portable"
+    ],
+    "attributes": {
+      "ram": "8GB",
+      "storage": "256GB",
+      "weight": "1.1kg"
+    },
+    "use_cases": [
+      "college",
+      "study"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/studylite-13",
+    "rating": 4.1,
+    "review_count": 137,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "outdoor-001",
+    "name": "SummitTrail 40L Pack",
+    "brand": "SummitTrail",
+    "category": "outdoor",
+    "subcategory": "backpack",
+    "price": 3499,
+    "currency": "INR",
+    "description": "Lightweight hiking backpack built for day treks and weekend use.",
+    "tags": [
+      "hiking",
+      "travel",
+      "durable"
+    ],
+    "attributes": {
+      "capacity": "40L",
+      "material": "nylon",
+      "waterproof": true
+    },
+    "use_cases": [
+      "hiking",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/summittrail-40l-pack",
+    "rating": 4.6,
+    "review_count": 56,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "outdoor-002",
+    "name": "ForestCamp Tent 2P",
+    "brand": "ForestCamp",
+    "category": "outdoor",
+    "subcategory": "tent",
+    "price": 7499,
+    "currency": "INR",
+    "description": "Two-person camping tent with compact setup and water-resistant shell.",
+    "tags": [
+      "camping",
+      "outdoor",
+      "durable"
+    ],
+    "attributes": {
+      "capacity": "2 persons",
+      "waterproof": true
+    },
+    "use_cases": [
+      "camping",
+      "travel"
+    ],
+    "stock_status": "limited",
+    "image": "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/forestcamp-tent-2p",
+    "rating": 4.3,
+    "review_count": 92,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "fitness-001",
+    "name": "FlexCore Yoga Mat",
+    "brand": "FlexCore",
+    "category": "fitness",
+    "subcategory": "yoga",
+    "price": 1299,
+    "currency": "INR",
+    "description": "Comfortable yoga mat with a non-slip finish for home and studio workouts.",
+    "tags": [
+      "fitness",
+      "yoga",
+      "comfort"
+    ],
+    "attributes": {
+      "thickness": "6mm",
+      "material": "TPE"
+    },
+    "use_cases": [
+      "fitness",
+      "home exercise"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/flexcore-yoga-mat",
+    "rating": 4.4,
+    "review_count": 112,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "fitness-002",
+    "name": "PulseBand Smart Watch",
+    "brand": "PulseBand",
+    "category": "fitness",
+    "subcategory": "wearable",
+    "price": 4999,
+    "currency": "INR",
+    "description": "Fitness tracker for heart rate, step goals, and sleep trends.",
+    "tags": [
+      "fitness",
+      "health",
+      "tracking"
+    ],
+    "attributes": {
+      "battery": "7 days",
+      "waterproof": true
+    },
+    "use_cases": [
+      "fitness",
+      "daily tracking"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/pulseband-smart-watch",
+    "rating": 4.2,
+    "review_count": 88,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "kitchen-001",
+    "name": "BrewMate Electric Kettle",
+    "brand": "BrewMate",
+    "category": "home-kitchen",
+    "subcategory": "kitchen appliance",
+    "price": 2299,
+    "currency": "INR",
+    "description": "Fast-boil electric kettle with auto shutoff and easy-pour spout.",
+    "tags": [
+      "kitchen",
+      "home",
+      "convenience"
+    ],
+    "attributes": {
+      "capacity": "1.5L",
+      "power": "1500W"
+    },
+    "use_cases": [
+      "daily use",
+      "home"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/brewmate-kettle",
+    "rating": 4.5,
+    "review_count": 99,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "kitchen-002",
+    "name": "ChefLift Blender Pro",
+    "brand": "ChefLift",
+    "category": "home-kitchen",
+    "subcategory": "blender",
+    "price": 3999,
+    "currency": "INR",
+    "description": "Compact blender for smoothies, shakes, and breakfast prep.",
+    "tags": [
+      "kitchen",
+      "smoothie",
+      "daily use"
+    ],
+    "attributes": {
+      "capacity": "750ml",
+      "power": "1000W"
+    },
+    "use_cases": [
+      "home",
+      "breakfast"
+    ],
+    "stock_status": "limited",
+    "image": "https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/cheflift-blender-pro",
+    "rating": 4.4,
+    "review_count": 128,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "book-001",
+    "name": "Deep Work",
+    "brand": "Penguin",
+    "category": "books",
+    "subcategory": "productivity",
+    "price": 499,
+    "currency": "INR",
+    "description": "A practical read on focus, distraction, and professional productivity.",
+    "tags": [
+      "study",
+      "focus",
+      "productivity"
+    ],
+    "attributes": {
+      "format": "paperback"
+    },
+    "use_cases": [
+      "study",
+      "career"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/deep-work",
+    "rating": 4.7,
+    "review_count": 410,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "book-002",
+    "name": "Atomic Habits",
+    "brand": "Random House",
+    "category": "books",
+    "subcategory": "self-improvement",
+    "price": 699,
+    "currency": "INR",
+    "description": "A popular habit-building guide with clear and actionable frameworks.",
+    "tags": [
+      "self-improvement",
+      "habits",
+      "motivation"
+    ],
+    "attributes": {
+      "format": "paperback"
+    },
+    "use_cases": [
+      "growth",
+      "discipline"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/atomic-habits",
+    "rating": 4.8,
+    "review_count": 524,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "fashion-001",
+    "name": "UrbanThread Overshirt",
+    "brand": "UrbanThread",
+    "category": "fashion",
+    "subcategory": "outerwear",
+    "price": 2499,
+    "currency": "INR",
+    "description": "Lightweight overshirt for everyday layering in mild weather.",
+    "tags": [
+      "casual",
+      "layering",
+      "comfortable"
+    ],
+    "attributes": {
+      "color": "olive",
+      "material": "cotton"
+    },
+    "use_cases": [
+      "daily wear",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/urbanthread-overshirt",
+    "rating": 4.3,
+    "review_count": 97,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "gift-001",
+    "name": "Heritage Desk Clock",
+    "brand": "MiraWorks",
+    "category": "gifts",
+    "subcategory": "home decor",
+    "price": 1999,
+    "currency": "INR",
+    "description": "Classic desk clock for gifting and home styling.",
+    "tags": [
+      "giftable",
+      "home",
+      "classic"
+    ],
+    "attributes": {
+      "material": "wood"
+    },
+    "use_cases": [
+      "gift",
+      "desk setup"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/heritage-desk-clock",
+    "rating": 4.7,
+    "review_count": 72,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-001",
+    "name": "Demo Product 1",
+    "brand": "NorthPeak",
+    "category": "footwear",
+    "subcategory": "general",
+    "price": 776,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "footwear"
+    ],
+    "attributes": {
+      "color": "navy",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-1",
+    "rating": 3.9000000000000004,
+    "review_count": 25,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-002",
+    "name": "Demo Product 2",
+    "brand": "Luma",
+    "category": "outdoor",
+    "subcategory": "general",
+    "price": 1053,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "outdoor"
+    ],
+    "attributes": {
+      "color": "olive",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-2",
+    "rating": 4.1000000000000005,
+    "review_count": 30,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-003",
+    "name": "Demo Product 3",
+    "brand": "UrbanNest",
+    "category": "home-kitchen",
+    "subcategory": "general",
+    "price": 1330,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "home"
+    ],
+    "attributes": {
+      "color": "red",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-3",
+    "rating": 4.300000000000001,
+    "review_count": 35,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-004",
+    "name": "Demo Product 4",
+    "brand": "TrailCore",
+    "category": "fitness",
+    "subcategory": "general",
+    "price": 1607,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "fitness"
+    ],
+    "attributes": {
+      "color": "black",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-4",
+    "rating": 4.5,
+    "review_count": 40,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-005",
+    "name": "Demo Product 5",
+    "brand": "ValueLane",
+    "category": "books",
+    "subcategory": "general",
+    "price": 1884,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "books"
+    ],
+    "attributes": {
+      "color": "navy",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-5",
+    "rating": 4.7,
+    "review_count": 45,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-006",
+    "name": "Demo Product 6",
+    "brand": "Aster",
+    "category": "fashion",
+    "subcategory": "general",
+    "price": 2161,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "fashion"
+    ],
+    "attributes": {
+      "color": "olive",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-6",
+    "rating": 3.7,
+    "review_count": 50,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-007",
+    "name": "Demo Product 7",
+    "brand": "NorthPeak",
+    "category": "gifts",
+    "subcategory": "general",
+    "price": 2438,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "gifts"
+    ],
+    "attributes": {
+      "color": "red",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-7",
+    "rating": 3.9000000000000004,
+    "review_count": 55,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-008",
+    "name": "Demo Product 8",
+    "brand": "Luma",
+    "category": "electronics",
+    "subcategory": "general",
+    "price": 2715,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "electronics"
+    ],
+    "attributes": {
+      "color": "black",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-8",
+    "rating": 4.1000000000000005,
+    "review_count": 60,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-009",
+    "name": "Demo Product 9",
+    "brand": "UrbanNest",
+    "category": "footwear",
+    "subcategory": "general",
+    "price": 2992,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "footwear"
+    ],
+    "attributes": {
+      "color": "navy",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-9",
+    "rating": 4.300000000000001,
+    "review_count": 65,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-010",
+    "name": "Demo Product 10",
+    "brand": "TrailCore",
+    "category": "outdoor",
+    "subcategory": "general",
+    "price": 3269,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "outdoor"
+    ],
+    "attributes": {
+      "color": "olive",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-10",
+    "rating": 4.5,
+    "review_count": 70,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-011",
+    "name": "Demo Product 11",
+    "brand": "ValueLane",
+    "category": "home-kitchen",
+    "subcategory": "general",
+    "price": 3546,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "home"
+    ],
+    "attributes": {
+      "color": "red",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-11",
+    "rating": 4.7,
+    "review_count": 75,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-012",
+    "name": "Demo Product 12",
+    "brand": "Aster",
+    "category": "fitness",
+    "subcategory": "general",
+    "price": 3823,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "fitness"
+    ],
+    "attributes": {
+      "color": "black",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-12",
+    "rating": 3.7,
+    "review_count": 80,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-013",
+    "name": "Demo Product 13",
+    "brand": "NorthPeak",
+    "category": "books",
+    "subcategory": "general",
+    "price": 4100,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "books"
+    ],
+    "attributes": {
+      "color": "navy",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-13",
+    "rating": 3.9000000000000004,
+    "review_count": 85,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-014",
+    "name": "Demo Product 14",
+    "brand": "Luma",
+    "category": "fashion",
+    "subcategory": "general",
+    "price": 4377,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "fashion"
+    ],
+    "attributes": {
+      "color": "olive",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-14",
+    "rating": 4.1000000000000005,
+    "review_count": 90,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-015",
+    "name": "Demo Product 15",
+    "brand": "UrbanNest",
+    "category": "gifts",
+    "subcategory": "general",
+    "price": 4654,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "gifts"
+    ],
+    "attributes": {
+      "color": "red",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-15",
+    "rating": 4.300000000000001,
+    "review_count": 95,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-016",
+    "name": "Demo Product 16",
+    "brand": "TrailCore",
+    "category": "electronics",
+    "subcategory": "general",
+    "price": 4931,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "electronics"
+    ],
+    "attributes": {
+      "color": "black",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-16",
+    "rating": 4.5,
+    "review_count": 100,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-017",
+    "name": "Demo Product 17",
+    "brand": "ValueLane",
+    "category": "footwear",
+    "subcategory": "general",
+    "price": 5208,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "footwear"
+    ],
+    "attributes": {
+      "color": "navy",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-17",
+    "rating": 4.7,
+    "review_count": 105,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-018",
+    "name": "Demo Product 18",
+    "brand": "Aster",
+    "category": "outdoor",
+    "subcategory": "general",
+    "price": 5485,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "outdoor"
+    ],
+    "attributes": {
+      "color": "olive",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-18",
+    "rating": 3.7,
+    "review_count": 110,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-019",
+    "name": "Demo Product 19",
+    "brand": "NorthPeak",
+    "category": "home-kitchen",
+    "subcategory": "general",
+    "price": 5762,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "home"
+    ],
+    "attributes": {
+      "color": "red",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-19",
+    "rating": 3.9000000000000004,
+    "review_count": 115,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-020",
+    "name": "Demo Product 20",
+    "brand": "Luma",
+    "category": "fitness",
+    "subcategory": "general",
+    "price": 6039,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "fitness"
+    ],
+    "attributes": {
+      "color": "black",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-20",
+    "rating": 4.1000000000000005,
+    "review_count": 120,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-021",
+    "name": "Demo Product 21",
+    "brand": "UrbanNest",
+    "category": "books",
+    "subcategory": "general",
+    "price": 6316,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "books"
+    ],
+    "attributes": {
+      "color": "navy",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-21",
+    "rating": 4.300000000000001,
+    "review_count": 125,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-022",
+    "name": "Demo Product 22",
+    "brand": "TrailCore",
+    "category": "fashion",
+    "subcategory": "general",
+    "price": 6593,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "fashion"
+    ],
+    "attributes": {
+      "color": "olive",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-22",
+    "rating": 4.5,
+    "review_count": 130,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-023",
+    "name": "Demo Product 23",
+    "brand": "ValueLane",
+    "category": "gifts",
+    "subcategory": "general",
+    "price": 6870,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "gifts"
+    ],
+    "attributes": {
+      "color": "red",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-23",
+    "rating": 4.7,
+    "review_count": 135,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-024",
+    "name": "Demo Product 24",
+    "brand": "Aster",
+    "category": "electronics",
+    "subcategory": "general",
+    "price": 7147,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "electronics"
+    ],
+    "attributes": {
+      "color": "black",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-24",
+    "rating": 3.7,
+    "review_count": 140,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-025",
+    "name": "Demo Product 25",
+    "brand": "NorthPeak",
+    "category": "footwear",
+    "subcategory": "general",
+    "price": 7424,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "footwear"
+    ],
+    "attributes": {
+      "color": "navy",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-25",
+    "rating": 3.9000000000000004,
+    "review_count": 145,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-026",
+    "name": "Demo Product 26",
+    "brand": "Luma",
+    "category": "outdoor",
+    "subcategory": "general",
+    "price": 7701,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "outdoor"
+    ],
+    "attributes": {
+      "color": "olive",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-26",
+    "rating": 4.1000000000000005,
+    "review_count": 150,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-027",
+    "name": "Demo Product 27",
+    "brand": "UrbanNest",
+    "category": "home-kitchen",
+    "subcategory": "general",
+    "price": 7978,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "home"
+    ],
+    "attributes": {
+      "color": "red",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-27",
+    "rating": 4.300000000000001,
+    "review_count": 155,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-028",
+    "name": "Demo Product 28",
+    "brand": "TrailCore",
+    "category": "fitness",
+    "subcategory": "general",
+    "price": 8255,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "fitness"
+    ],
+    "attributes": {
+      "color": "black",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-28",
+    "rating": 4.5,
+    "review_count": 160,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-029",
+    "name": "Demo Product 29",
+    "brand": "ValueLane",
+    "category": "books",
+    "subcategory": "general",
+    "price": 8532,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "books"
+    ],
+    "attributes": {
+      "color": "navy",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-29",
+    "rating": 4.7,
+    "review_count": 165,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-030",
+    "name": "Demo Product 30",
+    "brand": "Aster",
+    "category": "fashion",
+    "subcategory": "general",
+    "price": 8809,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "fashion"
+    ],
+    "attributes": {
+      "color": "olive",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-30",
+    "rating": 3.7,
+    "review_count": 170,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-031",
+    "name": "Demo Product 31",
+    "brand": "NorthPeak",
+    "category": "gifts",
+    "subcategory": "general",
+    "price": 9086,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "gifts"
+    ],
+    "attributes": {
+      "color": "red",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-31",
+    "rating": 3.9000000000000004,
+    "review_count": 175,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-032",
+    "name": "Demo Product 32",
+    "brand": "Luma",
+    "category": "electronics",
+    "subcategory": "general",
+    "price": 9363,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "electronics"
+    ],
+    "attributes": {
+      "color": "black",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-32",
+    "rating": 4.1000000000000005,
+    "review_count": 180,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-033",
+    "name": "Demo Product 33",
+    "brand": "UrbanNest",
+    "category": "footwear",
+    "subcategory": "general",
+    "price": 9640,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "footwear"
+    ],
+    "attributes": {
+      "color": "navy",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-33",
+    "rating": 4.300000000000001,
+    "review_count": 185,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-034",
+    "name": "Demo Product 34",
+    "brand": "TrailCore",
+    "category": "outdoor",
+    "subcategory": "general",
+    "price": 9917,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "outdoor"
+    ],
+    "attributes": {
+      "color": "olive",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-34",
+    "rating": 4.5,
+    "review_count": 190,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-035",
+    "name": "Demo Product 35",
+    "brand": "ValueLane",
+    "category": "home-kitchen",
+    "subcategory": "general",
+    "price": 10194,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "home"
+    ],
+    "attributes": {
+      "color": "red",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-35",
+    "rating": 4.7,
+    "review_count": 195,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-036",
+    "name": "Demo Product 36",
+    "brand": "Aster",
+    "category": "fitness",
+    "subcategory": "general",
+    "price": 10471,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "fitness"
+    ],
+    "attributes": {
+      "color": "black",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-36",
+    "rating": 3.7,
+    "review_count": 200,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-037",
+    "name": "Demo Product 37",
+    "brand": "NorthPeak",
+    "category": "books",
+    "subcategory": "general",
+    "price": 10748,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "books"
+    ],
+    "attributes": {
+      "color": "navy",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-37",
+    "rating": 3.9000000000000004,
+    "review_count": 205,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-038",
+    "name": "Demo Product 38",
+    "brand": "Luma",
+    "category": "fashion",
+    "subcategory": "general",
+    "price": 11025,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "fashion"
+    ],
+    "attributes": {
+      "color": "olive",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-38",
+    "rating": 4.1000000000000005,
+    "review_count": 210,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-039",
+    "name": "Demo Product 39",
+    "brand": "UrbanNest",
+    "category": "gifts",
+    "subcategory": "general",
+    "price": 11302,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "gifts"
+    ],
+    "attributes": {
+      "color": "red",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-39",
+    "rating": 4.300000000000001,
+    "review_count": 215,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-040",
+    "name": "Demo Product 40",
+    "brand": "TrailCore",
+    "category": "electronics",
+    "subcategory": "general",
+    "price": 11579,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "electronics"
+    ],
+    "attributes": {
+      "color": "black",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-40",
+    "rating": 4.5,
+    "review_count": 220,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-041",
+    "name": "Demo Product 41",
+    "brand": "ValueLane",
+    "category": "footwear",
+    "subcategory": "general",
+    "price": 11856,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "footwear"
+    ],
+    "attributes": {
+      "color": "navy",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-41",
+    "rating": 4.7,
+    "review_count": 225,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-042",
+    "name": "Demo Product 42",
+    "brand": "Aster",
+    "category": "outdoor",
+    "subcategory": "general",
+    "price": 12133,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "outdoor"
+    ],
+    "attributes": {
+      "color": "olive",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-42",
+    "rating": 3.7,
+    "review_count": 230,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-043",
+    "name": "Demo Product 43",
+    "brand": "NorthPeak",
+    "category": "home-kitchen",
+    "subcategory": "general",
+    "price": 12410,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "home"
+    ],
+    "attributes": {
+      "color": "red",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-43",
+    "rating": 3.9000000000000004,
+    "review_count": 235,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-044",
+    "name": "Demo Product 44",
+    "brand": "Luma",
+    "category": "fitness",
+    "subcategory": "general",
+    "price": 12687,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "fitness"
+    ],
+    "attributes": {
+      "color": "black",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-44",
+    "rating": 4.1000000000000005,
+    "review_count": 240,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-045",
+    "name": "Demo Product 45",
+    "brand": "UrbanNest",
+    "category": "books",
+    "subcategory": "general",
+    "price": 12964,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "books"
+    ],
+    "attributes": {
+      "color": "navy",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-45",
+    "rating": 4.300000000000001,
+    "review_count": 245,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-046",
+    "name": "Demo Product 46",
+    "brand": "TrailCore",
+    "category": "fashion",
+    "subcategory": "general",
+    "price": 13241,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "fashion"
+    ],
+    "attributes": {
+      "color": "olive",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-46",
+    "rating": 4.5,
+    "review_count": 250,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-047",
+    "name": "Demo Product 47",
+    "brand": "ValueLane",
+    "category": "gifts",
+    "subcategory": "general",
+    "price": 13518,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "gifts"
+    ],
+    "attributes": {
+      "color": "red",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-47",
+    "rating": 4.7,
+    "review_count": 255,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-048",
+    "name": "Demo Product 48",
+    "brand": "Aster",
+    "category": "electronics",
+    "subcategory": "general",
+    "price": 13795,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "electronics"
+    ],
+    "attributes": {
+      "color": "black",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-48",
+    "rating": 3.7,
+    "review_count": 260,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-049",
+    "name": "Demo Product 49",
+    "brand": "NorthPeak",
+    "category": "footwear",
+    "subcategory": "general",
+    "price": 14072,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "footwear"
+    ],
+    "attributes": {
+      "color": "navy",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-49",
+    "rating": 3.9000000000000004,
+    "review_count": 265,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  },
+  {
+    "product_id": "demo-050",
+    "name": "Demo Product 50",
+    "brand": "Luma",
+    "category": "outdoor",
+    "subcategory": "general",
+    "price": 14349,
+    "currency": "INR",
+    "description": "A versatile demo product for testing shopping recommendations and ranking logic.",
+    "tags": [
+      "general",
+      "demo",
+      "outdoor"
+    ],
+    "attributes": {
+      "color": "olive",
+      "material": "mixed"
+    },
+    "use_cases": [
+      "daily use",
+      "travel"
+    ],
+    "stock_status": "in_stock",
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "url": "https://example.com/products/demo-50",
+    "rating": 4.1000000000000005,
+    "review_count": 270,
+    "dataset_source": "demo",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z"
+  }
+]

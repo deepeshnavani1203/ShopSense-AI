@@ -1,121 +1,107 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import { useEffect, useMemo, useState } from 'react'
+import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom'
+import { Compass, Heart, History, Home, LayoutGrid, Sparkles } from 'lucide-react'
+import HomePage from './pages/Home'
+import DiscoverPage from './pages/Discover'
+import ComparePage from './pages/Compare'
+import PreferencesPage from './pages/Preferences'
+import SessionHistoryPage from './pages/SessionHistory'
+import NotFoundPage from './pages/NotFound'
+import { api } from './services/api'
+
+const navItems = [
+  { to: '/', label: 'Home', icon: Home },
+  { to: '/discover', label: 'Discover', icon: Compass },
+  { to: '/compare', label: 'Compare', icon: LayoutGrid },
+  { to: '/preferences', label: 'Preferences', icon: Heart },
+  { to: '/history', label: 'History', icon: History },
+]
 
 function App() {
-  const [count, setCount] = useState(0)
+  const userId = useMemo(() => {
+    const stored = localStorage.getItem('shopsense-user')
+    if (stored) return stored
+    const next = 'demo-user'
+    localStorage.setItem('shopsense-user', next)
+    return next
+  }, [])
+
+  const [savedProducts, setSavedProducts] = useState([])
+  const [selectedCompare, setSelectedCompare] = useState(() => {
+    try {
+      return JSON.parse(localStorage.getItem('shopsense-compare') || '[]')
+    } catch {
+      return []
+    }
+  })
+
+  useEffect(() => {
+    localStorage.setItem('shopsense-compare', JSON.stringify(selectedCompare))
+  }, [selectedCompare])
+
+  useEffect(() => {
+    api
+      .getSavedProducts()
+      .then((payload) => setSavedProducts(payload.items || []))
+      .catch(() => setSavedProducts([]))
+  }, [])
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <BrowserRouter>
+      <div className="min-h-screen bg-[#f7f5f3] text-slate-800">
+        <header className="border-b border-slate-200 bg-white/90 backdrop-blur-sm">
+          <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+            <div className="flex items-center gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-violet-600 text-white shadow-sm">
+                <Sparkles className="h-5 w-5" />
+              </div>
+              <div>
+                <p className="text-lg font-black tracking-tight text-slate-900">ShopSense AI</p>
+              </div>
+            </div>
 
-      <div className="ticks"></div>
+            <nav className="hidden items-center gap-1 rounded-full border border-slate-200 bg-slate-50 p-1 md:flex">
+              {navItems.map(({ to, label, icon: Icon }) => (
+                <NavLink
+                  key={to}
+                  to={to}
+                  className={({ isActive }) =>
+                    `inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition ${
+                      isActive ? 'bg-slate-900 text-white shadow-sm' : 'text-slate-600 hover:text-slate-900'
+                    }`
+                  }
+                >
+                  <Icon className="h-4 w-4" />
+                  {label}
+                </NavLink>
+              ))}
+            </nav>
+          </div>
+        </header>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+        <main>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route
+              path="/discover"
+              element={
+                <DiscoverPage
+                  userId={userId}
+                  selectedCompare={selectedCompare}
+                  setSelectedCompare={setSelectedCompare}
+                  savedProducts={savedProducts}
+                  setSavedProducts={setSavedProducts}
+                />
+              }
+            />
+            <Route path="/compare" element={<ComparePage selectedCompare={selectedCompare} />} />
+            <Route path="/preferences" element={<PreferencesPage userId={userId} />} />
+            <Route path="/history" element={<SessionHistoryPage />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+        </main>
+      </div>
+    </BrowserRouter>
   )
 }
 
