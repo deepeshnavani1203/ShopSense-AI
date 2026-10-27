@@ -1,13 +1,60 @@
+import asyncio
 import os
+from unittest.mock import AsyncMock
 
 from dotenv import dotenv_values
 from fastapi.testclient import TestClient
 
 from app.config import BACKEND_ENV_FILE, Settings
+from app.database import DatabaseManager
 from app.main import app
 from app.services.product_service import build_why_not_response, parse_user_query, rank_products, list_products
 
 client = TestClient(app)
+
+
+class MongoObject:
+    def __bool__(self):
+        raise AssertionError("MongoDB objects must not be checked for truthiness")
+
+
+def test_database_manager_checks_mongo_objects_against_none():
+    manager = DatabaseManager()
+    admin = type("Admin", (), {"command": AsyncMock(return_value={"ok": 1})})()
+    manager.client = type("Client", (), {"admin": admin})()
+
+    async def verify():
+        status = await manager.ping()
+        collection = await manager.get_collection("products")
+        return status, collection
+
+    class Database(MongoObject):
+        def __getitem__(self, name):
+            return name
+
+    manager.db = Database()
+    status, collection = asyncio.run(verify())
+
+    assert status["connected"] is True
+    assert collection == "products"
+
+
+def test_database_ping_does_not_expose_driver_error_details():
+    manager = DatabaseManager()
+    admin = type("Admin", (), {"command": AsyncMock(side_effect=RuntimeError("private connection detail"))})()
+    manager.client = type("Client", (), {"admin": admin})()
+
+    class Database(MongoObject):
+        pass
+
+    manager.db = Database()
+    status = asyncio.run(manager.ping())
+
+    assert status == {
+        "connected": False,
+        "database": Settings().MONGODB_DATABASE,
+        "message": "MongoDB unreachable",
+    }
 
 
 def test_settings_load_backend_env_independent_of_working_directory(tmp_path, monkeypatch):

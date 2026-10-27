@@ -23,23 +23,24 @@ class DatabaseManager:
         try:
             self.client = AsyncIOMotorClient(settings.MONGODB_URI, serverSelectionTimeoutMS=3000)
             self.db = self.client[settings.MONGODB_DATABASE]
-            logger.info("MongoDB client connected successfully.")
+            logger.info("MongoDB client initialized; connectivity will be verified by ping.")
         except Exception as exc:  # pragma: no cover - runtime dependency
-            logger.warning("MongoDB unavailable: %s", exc)
+            logger.warning("MongoDB client initialization failed (%s).", type(exc).__name__)
             self.client = None
             self.db = None
 
     async def ping(self) -> dict[str, Any]:
-        if not self.db or not self.client:
+        if self.db is None or self.client is None:
             return {"connected": False, "database": None, "message": "MongoDB not configured"}
         try:
             await self.client.admin.command("ping")
             return {"connected": True, "database": settings.MONGODB_DATABASE, "message": "MongoDB reachable"}
         except Exception as exc:  # pragma: no cover - runtime dependency
-            return {"connected": False, "database": settings.MONGODB_DATABASE, "message": f"MongoDB unreachable: {exc}"}
+            logger.warning("MongoDB ping failed (%s).", type(exc).__name__)
+            return {"connected": False, "database": settings.MONGODB_DATABASE, "message": "MongoDB unreachable"}
 
     async def get_collection(self, name: str):
-        if not self.db:
+        if self.db is None:
             return None
         return self.db[name]
 
