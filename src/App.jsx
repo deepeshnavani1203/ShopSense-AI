@@ -29,7 +29,11 @@ function App() {
   const [savedProducts, setSavedProducts] = useState([])
   const [selectedCompare, setSelectedCompare] = useState(() => {
     try {
-      return JSON.parse(localStorage.getItem('shopsense-compare') || '[]')
+      const stored = JSON.parse(localStorage.getItem('shopsense-compare') || '[]')
+      // Migrate old string[] format to {product_id, fit_score?, match_summary?}[]
+      return stored.map((item) =>
+        typeof item === 'string' ? { product_id: item } : item,
+      )
     } catch {
       return []
     }

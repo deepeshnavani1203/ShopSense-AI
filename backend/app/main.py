@@ -11,7 +11,7 @@ from .api.recommendations import router as recommendations_router
 from .api.saved_products import router as saved_products_router
 from .api.sessions import router as sessions_router
 from .config import settings
-from .database import ensure_database_ready
+from .database import ensure_database_ready, seed_products_if_empty
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("shopsense")
@@ -39,6 +39,7 @@ app.include_router(saved_products_router, prefix="/api/v1")
 async def startup_event() -> None:
     logger.info("Starting ShopSense AI backend")
     await ensure_database_ready()
+    await seed_products_if_empty()
     logger.info("Backend startup complete")
 
 

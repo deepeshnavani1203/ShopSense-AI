@@ -655,19 +655,46 @@ def build_recommendation_response(message: str, session_context: dict[str, Any] 
     }
 
 
-def build_why_not_response(product_id: str, message: str) -> dict[str, Any]:
+def build_why_not_response(
+    product_id: str,
+    message: str,
+    session_constraints: dict[str, Any] | None = None,
+) -> dict[str, Any]:
     product = get_product_by_id(product_id)
     if not product:
         return {"status": "not_found", "message": "Product not found"}
-    constraints = parse_user_query(message)
+    # Merge message-derived constraints with richer session context
+    msg_constraints = parse_user_query(message)
+    constraints = {**msg_constraints, **(session_constraints or {})}
+    # If session has max_budget, use it
+    if session_constraints and session_constraints.get("max_budget"):
+        constraints["max_budget"] = session_constraints["max_budget"]
     metrics = score_product(product, constraints)
+    price = float(product.get("price", 0.0))
+    budget = constraints.get("max_budget")
+    hard_failures = list(metrics.get("unmet_constraints", []))
+    if budget and price > float(budget):
+        over_by = price - float(budget)
+        failure_msg = f"over budget by ₹{over_by:.0f}"
+        if failure_msg not in hard_failures:
+            hard_failures.insert(0, failure_msg)
     return {
         "status": "ok",
         "product_id": product_id,
         "name": product.get("name"),
-        "budget_exceeded": bool(constraints.get("max_budget") and float(product.get("price", 0.0)) > float(constraints.get("max_budget"))),
-        "hard_constraint_failures": metrics.get("unmet_constraints", []),
-        "feature_gaps": [tag for tag in constraints.get("tags", []) if tag not in set(product.get("tags", []))],
-        "matched_score": metrics.get("fit_score", 0),
-        "message": f"{product.get('name')} missed the requested constraints because it does not fully meet the current fit score and budget preferences.",
+        "budget_exceeded": bool(budget and price > float(budget)),
+        "hard_constraint_failures": hard_failures,
+        "feature_gaps": [
+            tag for tag in constraints.get("tags", [])
+            if tag not in set(product.get("tags", []))
+        ],
+        "matched_score": round(metrics.get("fit_score", 0) / 100, 4)
+        if metrics.get("fit_score", 0) > 1
+        else metrics.get("fit_score", 0),
+        "message": (
+            f"{product.get('name')} was not recommended because: "
+            + "; ".join(hard_failures)
+            if hard_failures
+            else f"{product.get('name')} is a reasonable option but ranked lower than the top picks."
+        ),
     }

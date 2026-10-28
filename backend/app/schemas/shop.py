@@ -59,12 +59,27 @@ class ChatRequest(BaseModel):
     message: str = Field(..., min_length=1, max_length=500)
 
 
+class DecisionSnapshot(BaseModel):
+    turn_number: int = 1
+    intent: str = ""
+    category: str | None = None
+    max_budget: float | None = None
+    confidence: float = 0.0
+    explicit_constraints: list[dict[str, Any]] = []
+    implicit_constraints: list[str] = []
+    tags: list[str] = []
+    relaxed: str | None = None
+    candidate_count: int = 0
+    ranked_count: int = 0
+
+
 class ChatResponse(BaseModel):
     session_id: str
     turn_id: str
     assistant_response: str
     clarification_question: str | None = None
     needs_clarification: bool = False
+    response_type: str = "products"  # "products" | "clarification" | "fallback"
     intent: dict[str, Any] = {}
     constraints: dict[str, Any] = {}
     recommendations: list[RecommendationItem] = []
@@ -73,6 +88,7 @@ class ChatResponse(BaseModel):
     complementary_product: dict[str, Any] | None = None
     confidence: float = 0.0
     clarification_threshold: float = 0.65
+    decision_snapshot: dict[str, Any] = {}
     pipeline_metadata: dict[str, Any] = {}
 
 
