@@ -35,6 +35,11 @@ export const api = {
       method: 'POST',
       body: JSON.stringify({ product_ids: ids }),
     }),
+  bestPick: (ids, constraints = {}) =>
+    request('/products/best-pick', {
+      method: 'POST',
+      body: JSON.stringify({ product_ids: ids, constraints }),
+    }),
 
   // Recommendations
   whyNot: (productId, message, sessionId = null) =>

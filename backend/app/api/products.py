@@ -1,5 +1,6 @@
 from fastapi import APIRouter, HTTPException
 
+from ..agents.best_pick import pick_best
 from ..schemas.shop import ProductComparisonRequest
 from ..services.product_service import build_why_not_response, get_product_by_id, list_products
 
@@ -31,10 +32,15 @@ async def compare_products(payload: ProductComparisonRequest):
     return {"items": products}
 
 
-@router.post("/why-not")
-async def why_not(payload: dict):
-    product_id = payload.get("product_id")
-    message = payload.get("message", "")
-    if not product_id:
-        raise HTTPException(status_code=400, detail="product_id is required")
-    return build_why_not_response(product_id, message)
+@router.post("/best-pick")
+async def best_pick(payload: dict):
+    """Given a list of product_ids and optional constraints, return the single best pick."""
+    product_ids = payload.get("product_ids", [])
+    constraints = payload.get("constraints", {})
+    if not product_ids:
+        raise HTTPException(status_code=400, detail="product_ids is required")
+    products = [p for pid in product_ids if (p := get_product_by_id(pid))]
+    if not products:
+        raise HTTPException(status_code=404, detail="No valid products found")
+    result = pick_best(products, constraints)
+    return result

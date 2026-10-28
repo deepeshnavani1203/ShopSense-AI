@@ -13,7 +13,7 @@ _groq_client = None
 
 _VALID_CATEGORIES = {
     "footwear", "electronics", "outdoor", "home-kitchen",
-    "fitness", "books", "fashion", "gifts", "all",
+    "fitness", "books", "fashion", "gifts", "wallets", "all",
 }
 
 _VALID_TAGS = {
@@ -55,7 +55,8 @@ def _call_groq_for_mapping(
         f"  category: one of {sorted(_VALID_CATEGORIES)}\n"
         f"  tags: subset of {sorted(_VALID_TAGS)}\n"
         "  use_case: string or null\n"
-        'Return JSON: {"category": str, "tags": [str], "use_case": str or null}'
+        'Return JSON: {"category": str, "tags": [str], "use_case": str or null}\n'
+        "Note: wallets = wallet/purse/cardholder category"
     )
     response = client.chat.completions.create(
         model=settings.GROQ_MODEL,
@@ -64,7 +65,7 @@ def _call_groq_for_mapping(
             {"role": "user", "content": user_prompt},
         ],
         temperature=0.1,
-        max_tokens=200,
+        max_tokens=2000,
         response_format={"type": "json_object"},
     )
     data = json.loads(response.choices[0].message.content)
@@ -136,6 +137,32 @@ def map_attributes(
     if not tags:
         tags = prior_constraints.get("tags", [])
 
+    # Subcategory hint — helps candidate_filter avoid cross-subcategory pollution
+    # e.g. "laptop" query should not return powerbanks from electronics
+    SUBCATEGORY_KEYWORDS = {
+        "laptop": "laptop", "laptops": "laptop",
+        "phone": "phone", "mobile": "phone", "smartphone": "phone",
+        "headphone": "headphone", "headphones": "headphone", "earbuds": "headphone",
+        "tablet": "tablet",
+        "speaker": "speaker", "bluetooth speaker": "speaker",
+        "camera": "camera",
+        "smartwatch": "smartwatch", "watch": None,  # watch alone is fashion, skip
+        "powerbank": "powerbank", "power bank": "powerbank",
+        "keyboard": "keyboard",
+        "monitor": "monitor",
+        "mouse": "mouse",
+        "router": "router",
+        "printer": "printer",
+        "charger": "charger",
+        "wallet": "wallet", "wallets": "wallet",
+    }
+    msg_lower = message.lower()
+    subcategory = None
+    for kw, sub in SUBCATEGORY_KEYWORDS.items():
+        if kw in msg_lower and sub:
+            subcategory = sub
+            break
+
     return {
         "category": category,
         "tags": tags,
@@ -145,6 +172,7 @@ def map_attributes(
         "budget": max_budget,
         "max_budget": max_budget,
         "min_budget": min_budget,
+        "subcategory": subcategory,
         "explicit_constraints": explicit_constraints,
         "implicit_constraints": implicit_constraints,
     }

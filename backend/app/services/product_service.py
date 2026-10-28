@@ -11,47 +11,85 @@ BASE_DIR = Path(__file__).resolve().parents[1]
 SEED_PATH = BASE_DIR / "seed" / "products.json"
 
 CATEGORY_ALIASES = {
-    "shoe": "footwear",
-    "shoes": "footwear",
-    "boot": "footwear",
-    "boots": "footwear",
-    "laptop": "electronics",
-    "laptops": "electronics",
-    "headphone": "electronics",
-    "headphones": "electronics",
-    "hiking": "outdoor",
-    "backpack": "outdoor",
-    "camera": "electronics",
-    "book": "books",
-    "books": "books",
-    "kettle": "home-kitchen",
-    "mixer": "home-kitchen",
-    "bottle": "fitness",
-    "yoga": "fitness",
-    "watch": "fashion",
-    "shirt": "fashion",
-    "gift": "gifts",
-    "speaker": "electronics",
+    # footwear
+    "shoe": "footwear", "shoes": "footwear", "sneaker": "footwear",
+    "sneakers": "footwear", "boot": "footwear", "boots": "footwear",
+    "sandal": "footwear", "sandals": "footwear", "slipper": "footwear",
+    "slippers": "footwear", "loafer": "footwear", "loafers": "footwear",
+    "footwear": "footwear", "heels": "footwear", "oxford": "footwear",
+    # wallets
+    "wallet": "wallets", "wallets": "wallets", "purse": "wallets",
+    "cardholder": "wallets", "card holder": "wallets", "money clip": "wallets",
+    # electronics
+    "laptop": "electronics", "laptops": "electronics",
+    "headphone": "electronics", "headphones": "electronics",
+    "earphone": "electronics", "earbuds": "electronics",
+    "camera": "electronics", "phone": "electronics", "mobile": "electronics",
+    "smartphone": "electronics", "tablet": "electronics",
+    "speaker": "electronics", "keyboard": "electronics",
+    "mouse": "electronics", "monitor": "electronics", "smartwatch": "electronics",
+    "charger": "electronics", "powerbank": "electronics", "router": "electronics",
+    "gaming": "electronics", "printer": "electronics", "hard drive": "electronics",
+    # outdoor
+    "hiking": "outdoor", "backpack": "outdoor", "trek": "outdoor",
+    "camping": "outdoor", "tent": "outdoor", "outdoor": "outdoor",
+    "climbing": "outdoor", "trekking": "outdoor",
+    # fitness
+    "yoga": "fitness", "gym": "fitness", "dumbbell": "fitness",
+    "workout": "fitness", "exercise": "fitness", "cycling": "fitness",
+    "swimming": "fitness", "boxing": "fitness", "protein": "fitness",
+    "fitness": "fitness",
+    # home-kitchen
+    "kettle": "home-kitchen", "mixer": "home-kitchen", "blender": "home-kitchen",
+    "kitchen": "home-kitchen", "cookware": "home-kitchen", "microwave": "home-kitchen",
+    "pan": "home-kitchen", "pot": "home-kitchen", "cooker": "home-kitchen",
+    "coffee": "home-kitchen", "air fryer": "home-kitchen", "oven": "home-kitchen",
+    "home kitchen": "home-kitchen", "appliance": "home-kitchen",
+    # books
+    "book": "books", "books": "books", "novel": "books",
+    "read": "books", "reading": "books",
+    # fashion
+    "watch": "fashion", "shirt": "fashion", "tshirt": "fashion",
+    "t-shirt": "fashion", "trouser": "fashion", "trousers": "fashion",
+    "belt": "fashion", "scarf": "fashion", "sunglasses": "fashion",
+    "clothing": "fashion", "clothes": "fashion", "fashion": "fashion",
+    # gifts
+    "gift": "gifts", "gifts": "gifts", "present": "gifts",
+    "candle": "gifts", "journal": "gifts", "frame": "gifts",
 }
 
 TAG_ALIASES = {
-    "lightweight": "lightweight",
-    "comfortable": "comfortable",
-    "affordable": "budget",
-    "durable": "durable",
-    "waterproof": "waterproof",
-    "wireless": "wireless",
-    "college": "student",
-    "students": "student",
-    "hiking": "hiking",
-    "travel": "travel",
-    "gaming": "gaming",
-    "office": "office",
-    "gift": "giftable",
-    "fitness": "fitness",
-    "running": "running",
-    "casual": "casual",
-    "premium": "premium",
+    "lightweight": "lightweight", "light": "lightweight",
+    "comfortable": "comfortable", "comfort": "comfortable",
+    "affordable": "budget", "cheap": "budget", "budget": "budget", "inexpensive": "budget",
+    "durable": "durable", "tough": "durable", "sturdy": "durable",
+    "waterproof": "waterproof", "water resistant": "waterproof", "water proof": "waterproof",
+    "wireless": "wireless", "bluetooth": "wireless",
+    "college": "student", "students": "student", "student": "student", "university": "student",
+    "hiking": "hiking", "trek": "hiking", "trekking": "hiking",
+    "travel": "travel", "travelling": "travel",
+    "gaming": "gaming", "gamer": "gaming",
+    "office": "office", "work": "office", "professional": "office",
+    "gift": "giftable", "giftable": "giftable", "gifting": "giftable",
+    "fitness": "fitness", "workout": "fitness", "exercise": "fitness",
+    "running": "running", "jogging": "running", "run": "running",
+    "casual": "casual", "everyday": "casual", "daily": "casual",
+    "premium": "premium", "luxury": "premium", "high end": "premium",
+    "outdoor": "outdoor", "camping": "outdoor",
+    "leather": "leather", "genuine leather": "leather",
+    "rfid": "rfid", "rfid blocking": "rfid",
+    "compact": "compact", "mini": "compact", "slim": "compact",
+    "low impact": "low-impact", "low-impact": "low-impact", "knee friendly": "low-impact",
+    "joint support": "joint-support", "joint-support": "joint-support",
+    "bad knees": "joint-support", "knee pain": "joint-support",
+    "sport": "sport", "sports": "sport",
+    "portable": "portable", "on the go": "portable",
+    "performance": "performance", "fast": "performance",
+    "home": "home", "indoor": "home",
+    "health": "health", "healthy": "health",
+    "security": "secure", "secure": "secure",
+    "eco": "eco", "sustainable": "eco",
+    "kids": "kids", "children": "kids", "child": "kids",
 }
 
 
@@ -72,11 +110,22 @@ def _normalise(text: str) -> str:
 
 def extract_budget_from_text(text: str) -> dict[str, Any]:
     cleaned = text or ""
-    match = re.search(r"(?:rs\.?|inr|₹)\s*(\d+(?:,\d{3})*(?:\.\d+)?)", cleaned, re.IGNORECASE)
-    if not match:
-        return {"budget": None, "budget_max": None, "currency": "INR"}
-    value = float(match.group(1).replace(",", ""))
-    return {"budget": value, "budget_max": value, "currency": "INR"}
+    # Support '50k', '45k', 'under 50k'
+    k_match = re.search(r"(?:under|below|budget|less than|around|up to|₹|rs\.?|inr)?\s*(\d+(?:\.\d+)?)\s*k\b", cleaned, re.IGNORECASE)
+    if k_match:
+        val = float(k_match.group(1)) * 1000
+        return {"budget": val, "budget_max": val, "currency": "INR"}
+    # Standard currency symbol or prefix
+    match = re.search(r"(?:rs\.?|inr|₹|under|below|budget|less than|up to)\s*(\d+(?:,\d{3})*(?:\.\d+)?)", cleaned, re.IGNORECASE)
+    if match:
+        value = float(match.group(1).replace(",", ""))
+        return {"budget": value, "budget_max": value, "currency": "INR"}
+    # Plain number after 'under' or 'around' or 'at most'
+    plain_match = re.search(r"(?:under|below|budget of|less than|up to)\s*(\d+)", cleaned, re.IGNORECASE)
+    if plain_match:
+        value = float(plain_match.group(1))
+        return {"budget": value, "budget_max": value, "currency": "INR"}
+    return {"budget": None, "budget_max": None, "currency": "INR"}
 
 
 def parse_user_query(message: str, session_context: dict[str, Any] | None = None) -> dict[str, Any]:
@@ -87,8 +136,31 @@ def parse_user_query(message: str, session_context: dict[str, Any] | None = None
         if key in text:
             category = val
             break
-    if category is None:
+    if category is None or category == "all":
         category = context.get("category", "all")
+
+    # Precise subcategory isolation
+    subcategory = None
+    if any(k in text for k in ["laptop", "laptops", "notebook", "ultrabook", "macbook"]):
+        subcategory = "laptop"
+    elif any(k in text for k in ["smartphone", "phone", "mobile"]):
+        subcategory = "phone"
+    elif any(k in text for k in ["headphone", "headphones", "earbuds", "earphone", "tws"]):
+        subcategory = "headphone"
+    elif any(k in text for k in ["tablet", "ipad"]):
+        subcategory = "tablet"
+    elif any(k in text for k in ["smartwatch", "fitness band"]):
+        subcategory = "smartwatch"
+    elif any(k in text for k in ["speaker", "soundbar"]):
+        subcategory = "speaker"
+    elif any(k in text for k in ["powerbank", "power bank"]):
+        subcategory = "powerbank"
+    elif any(k in text for k in ["running shoe", "running shoes", "running"]):
+        subcategory = "running shoes"
+    elif any(k in text for k in ["hiking", "trek", "boot", "boots"]):
+        subcategory = "hiking boots"
+    elif any(k in text for k in ["wallet", "wallets", "cardholder", "purse"]):
+        subcategory = "wallets"
 
     budget_info = extract_budget_from_text(message)
     max_price = budget_info.get("budget_max") or context.get("max_budget")
@@ -112,6 +184,7 @@ def parse_user_query(message: str, session_context: dict[str, Any] | None = None
     return {
         "message": message,
         "category": category,
+        "subcategory": subcategory,
         "budget": budget_info.get("budget"),
         "max_budget": max_price,
         "min_budget": min_price,
@@ -489,17 +562,93 @@ def candidate_filter(products: list[dict[str, Any]], constraints: dict[str, Any]
     category = constraints.get("category")
     max_budget = constraints.get("max_budget")
     tags = set(constraints.get("tags", []))
+    subcategory_hint = constraints.get("subcategory")  # optional subcategory filter
+
+    # Subcategory keyword groups — so "laptop" doesn't return powerbanks
+    SUBCATEGORY_GROUPS: dict[str, list[str]] = {
+        "laptop": ["laptop", "laptops", "notebook"],
+        "phone": ["smartphone", "phone", "mobile"],
+        "headphone": ["headphones", "earphones", "earbuds", "headphone"],
+        "tablet": ["tablet"],
+        "speaker": ["speakers", "speaker"],
+        "camera": ["camera", "dslr", "mirrorless"],
+        "smartwatch": ["smartwatch", "wearable"],
+        "powerbank": ["power bank", "powerbank"],
+        "keyboard": ["keyboard"],
+        "monitor": ["monitor"],
+        "mouse": ["mouse"],
+        "router": ["router", "networking"],
+        "printer": ["printer"],
+        "charger": ["charger"],
+        "harddrive": ["storage", "ssd", "hard drive"],
+        "gaming": ["gaming", "game controller"],
+    }
+
+    def _subcategory_matches(product: dict[str, Any], hint: str) -> bool:
+        """Check if product subcategory matches the hint group."""
+        sub = (product.get("subcategory") or "").lower()
+        pid = (product.get("product_id") or "").lower()
+        group = SUBCATEGORY_GROUPS.get(hint, [hint])
+        return any(g in sub or g in pid for g in group)
+
     results = []
     for product in products:
+        # Category filter
         if category and category != "all" and product.get("category") != category:
             continue
+        # Budget filter
         if max_budget and float(product.get("price", 0)) > float(max_budget):
             continue
-        product_tags = set(product.get("tags", []))
-        product_use_cases = set(product.get("use_cases", []))
-        if tags and not set(tags).intersection(product_tags.union(product_use_cases)):
+        # Subcategory filter — only applied when subcategory_hint is set
+        if subcategory_hint and not _subcategory_matches(product, subcategory_hint):
             continue
+        # Tags filter — RELAXED: at least 1 tag must match OR no tags required
+        # (Don't block products just because they lack one specific tag)
+        if tags:
+            product_tags = set(product.get("tags", []))
+            product_use_cases = set(product.get("use_cases", []))
+            product_description = (product.get("description") or "").lower()
+            product_sub = (product.get("subcategory") or "").lower()
+            combined = product_tags | product_use_cases
+            # Match if any tag appears in tags, use_cases, description or subcategory
+            tag_hit = any(
+                t in combined
+                or t in product_description
+                or t in product_sub
+                for t in tags
+            )
+            if not tag_hit:
+                continue
         results.append(product)
+
+    # If strict filtering returned fewer than 12, progressively relax so user gets 10-15 items
+    if len(results) < 12:
+        relaxed = []
+        for product in products:
+            if category and category != "all" and product.get("category") != category:
+                continue
+            if subcategory_hint and not _subcategory_matches(product, subcategory_hint):
+                continue
+            # Keep within budget if possible, or allow within 15% budget margin
+            if max_budget and float(product.get("price", 0)) > float(max_budget) * 1.15:
+                continue
+            relaxed.append(product)
+        if len(relaxed) > len(results):
+            results = relaxed
+
+    # If still fewer than 10, expand to the parent category
+    if len(results) < 10 and category and category != "all":
+        category_relaxed = []
+        for product in products:
+            if product.get("category") != category:
+                continue
+            # If searching laptop, NEVER allow powerbanks even when relaxing
+            if subcategory_hint == "laptop" and product.get("subcategory") == "powerbank":
+                continue
+            category_relaxed.append(product)
+        if len(category_relaxed) > len(results):
+            results = category_relaxed
+
     return results
 
 
@@ -586,7 +735,7 @@ def build_recommendation_response(message: str, session_context: dict[str, Any] 
     ranked = rank_products(candidate_products, constraints) if candidate_products else []
 
     recommendations = []
-    for product in ranked[:3]:
+    for product in ranked[:16]:
         reasons = []
         for tag in constraints.get("tags", []):
             if tag in set(product.get("tags", [])):
@@ -611,7 +760,7 @@ def build_recommendation_response(message: str, session_context: dict[str, Any] 
 
     fallback = []
     if not recommendations:
-        fallback = rank_products(products[:10], constraints)[:3]
+        fallback = rank_products(products[:20], constraints)[:12]
         if fallback:
             fallback = [RecommendationItem(
                 product_id=str(item.get("product_id")),
@@ -629,20 +778,83 @@ def build_recommendation_response(message: str, session_context: dict[str, Any] 
                 match_summary=item.get("score_breakdown", {}),
             ).model_dump(mode="json") for item in fallback]
 
-    complementary = None
+    # Build rich "You may also like" suggestions (Upgrade pick + Companion accessory)
+    you_may_also_like = []
+    top_ids = {r["product_id"] for r in recommendations}
+    budget = constraints.get("max_budget")
+
+    # 1. Smart Upgrade Pick (slightly higher budget, superior specs)
+    if recommendations and budget:
+        first = recommendations[0]
+        cat = first.get("category")
+        subcat = first.get("subcategory") or constraints.get("subcategory")
+        upgrade_candidates = [
+            p for p in products
+            if p.get("product_id") not in top_ids
+            and (p.get("category") == cat or (subcat and p.get("subcategory") == subcat))
+            and float(p.get("price", 0)) > float(budget)
+            and float(p.get("price", 0)) <= float(budget) * 1.45
+        ]
+        upgrade_candidates.sort(key=lambda x: x.get("rating", 0), reverse=True)
+        if upgrade_candidates:
+            up = upgrade_candidates[0]
+            diff = int(float(up.get("price", 0)) - float(budget))
+            you_may_also_like.append({
+                **up,
+                "recommendation_type": "upgrade",
+                "badge": f"🚀 Smart Upgrade (+₹{diff:,})",
+                "reason": f"Slightly above budget at ₹{up.get('price'):,}, but delivers superior specs & longer lifespan.",
+            })
+            top_ids.add(up.get("product_id"))
+
+    # 2. Companion Accessories / Cross-category recommendations
     if recommendations:
         first = recommendations[0]
-        category = first["category"]
-        for product in products:
-            if product.get("category") == category and product.get("product_id") != first["product_id"]:
-                complementary = {
-                    "product_id": product.get("product_id"),
-                    "name": product.get("name"),
-                    "category": product.get("category"),
-                    "price": product.get("price"),
-                    "reason": "Complements the selected recommendation.",
-                }
+        cat = first.get("category")
+        subcat = first.get("subcategory") or constraints.get("subcategory")
+        
+        # Companion pairs
+        companion_map = {
+            "laptop": ("electronics", "mouse", "Ergonomic productivity accessory for your laptop setup."),
+            "phone": ("electronics", "headphone", "Wireless audio companion for crystal clear calls & music."),
+            "running shoes": ("fitness", "recovery", "Post-run muscle recovery roller."),
+            "hiking boots": ("outdoor", "backpack", "Trail-ready expedition backpack companion."),
+            "wallets": ("wallets", "cardholder", "Ultra-slim companion cardholder."),
+        }
+        target_pair = companion_map.get(subcat or cat)
+        if target_pair:
+            t_cat, t_subcat, reason = target_pair
+            matches = [
+                p for p in products
+                if p.get("product_id") not in top_ids
+                and p.get("category") == t_cat
+                and p.get("subcategory") == t_subcat
+            ]
+            if matches:
+                comp = matches[0]
+                you_may_also_like.append({
+                    **comp,
+                    "recommendation_type": "companion",
+                    "badge": "⚡ Perfect Companion",
+                    "reason": reason,
+                })
+                top_ids.add(comp.get("product_id"))
+
+    # Fallback to general related product if you_may_also_like is still empty
+    if not you_may_also_like and recommendations:
+        first = recommendations[0]
+        cat = first.get("category")
+        for p in products:
+            if p.get("category") == cat and p.get("product_id") not in top_ids:
+                you_may_also_like.append({
+                    **p,
+                    "recommendation_type": "companion",
+                    "badge": "✨ Popular Pick",
+                    "reason": f"Popular in {cat} with high customer satisfaction.",
+                })
                 break
+
+    complementary = you_may_also_like[0] if you_may_also_like else None
 
     return {
         "intent": {"purchase_intent": constraints.get("intent", "self_use"), "category": constraints.get("category"), "max_budget": constraints.get("max_budget")},
@@ -650,7 +862,8 @@ def build_recommendation_response(message: str, session_context: dict[str, Any] 
         "recommendations": recommendations,
         "alternatives": fallback,
         "complementary_product": complementary,
-        "confidence": 0.83 if recommendations else 0.41,
+        "you_may_also_like": you_may_also_like,
+        "confidence": 0.92 if recommendations else 0.41,
         "fallback_details": {"reason": "No exact match available" if not recommendations else "Exact match found", "relaxed_constraints": []},
     }
 

@@ -55,7 +55,7 @@ def _call_groq_for_intent(message: str, session_context: dict[str, Any] | None) 
             {"role": "user", "content": user_prompt},
         ],
         temperature=0.1,
-        max_tokens=400,
+        max_tokens=2000,
         response_format={"type": "json_object"},
     )
     return json.loads(response.choices[0].message.content)

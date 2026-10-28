@@ -52,7 +52,7 @@ def _call_groq_for_clarification(
             {"role": "user", "content": user_prompt},
         ],
         temperature=0.1,
-        max_tokens=200,
+        max_tokens=2000,
         response_format={"type": "json_object"},
     )
     data = json.loads(response.choices[0].message.content)

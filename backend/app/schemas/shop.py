@@ -28,7 +28,7 @@ class ProductModel(BaseModel):
 
 
 class ProductComparisonRequest(BaseModel):
-    product_ids: list[str] = Field(..., min_length=1, max_length=3)
+    product_ids: list[str] = Field(..., min_length=1, max_length=20)
 
 
 class RecommendationItem(BaseModel):
@@ -86,6 +86,7 @@ class ChatResponse(BaseModel):
     alternatives: list[RecommendationItem] = []
     fallback_details: dict[str, Any] = {}
     complementary_product: dict[str, Any] | None = None
+    you_may_also_like: list[dict[str, Any]] = []
     confidence: float = 0.0
     clarification_threshold: float = 0.65
     decision_snapshot: dict[str, Any] = {}
